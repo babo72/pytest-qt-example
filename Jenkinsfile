@@ -17,8 +17,8 @@ pipeline {
         stage('py test') {
             steps {
                 bat 'pip install -r requirements.txt'
-                bat 'pytest'
-                bat 'pytest --cov-report xml --cov messageboxex'
+                bat 'python -m pytest'
+                bat 'python -m pytest --cov-report xml --cov messageboxex'
             }
         }
         stage('SonarQube analysis') {
