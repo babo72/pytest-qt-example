@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "SCM...${env.BUILD_ID} on ${env.BUILD_URL}, ${env.WORKSPACE}"
                 git (
-                    url: 'https://github.com/babo72/django_crud.git',
+                    url: 'https://github.com/babo72/pytest-qt-example.git',
                     branch: 'master',
                     credentialsId: 'babo72-github-token',
                     changelog: true,
