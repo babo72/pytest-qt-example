@@ -13,6 +13,7 @@ pipeline {
                     poll: true
                 )
             }
+        }
         stage('py test') {
             stpes {
                 sh 'pip install -r requirements.txt'
