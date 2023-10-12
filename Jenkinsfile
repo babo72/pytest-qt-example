@@ -49,6 +49,7 @@ pipeline {
         stage('pyinstall') {
             steps {
                 echo 'pyinstall...'
+                bat 'python -m pyinstaller --onefile --windowed messageboxex.py'
             }
         }
     }
