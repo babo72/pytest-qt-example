@@ -17,6 +17,9 @@ $ pip install pyinstaller
 $ pyinstaller --onefile --windowed messageboxex.py
 ```
 
+Jenkins pipeline 을 위한 Jenkinsfile 추가
+
+
 # To setup
 
 Run the following commands to setup a python virtual environment, install the requirements int and set the execution flag on the two sample scripts.
