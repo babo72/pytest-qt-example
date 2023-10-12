@@ -54,5 +54,11 @@ pipeline {
                 bat 'pyinstaller --onefile --windowed messageboxex.py'
             }
         }
+        stage('clean') {
+            steps {
+                echo 'remove build directory...'
+                bat 'rmdir build /s /q'
+            }
+        }
     }
 }
