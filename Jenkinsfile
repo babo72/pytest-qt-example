@@ -16,9 +16,9 @@ pipeline {
         }
         stage('py test') {
             steps {
-                sh 'pip install -r requirements.txt'
-                sh 'pytest'
-                sh 'pytest --cov-report xml --cov messageboxex'
+                bat 'pip install -r requirements.txt'
+                bat 'pytest'
+                bat 'pytest --cov-report xml --cov messageboxex'
             }
         }
         stage('SonarQube analysis') {
@@ -28,7 +28,7 @@ pipeline {
                     scannerHome = tool 'Sonar-Scanner'
                 }
                 withSonarQubeEnv('SonarCloud-babo72'){
-                    sh "${scannerHome}/bin/sonar-scanner -Dsonar.python.coverage.reportPaths=coverage.xml -Dsonar.organization=babo72 -Dsonar.projectKey=babo72_pyqt-example -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=9f5fe1f43c696afcaf53387d5ee0ec989da98bdf"
+                    bat "${scannerHome}/bin/sonar-scanner -Dsonar.python.coverage.reportPaths=coverage.xml -Dsonar.organization=babo72 -Dsonar.projectKey=babo72_pyqt-example -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=9f5fe1f43c696afcaf53387d5ee0ec989da98bdf"
                 }
             }
         }
