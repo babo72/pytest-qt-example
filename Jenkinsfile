@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage('py test') {
-            stpes {
+            steps {
                 sh 'pip install -r requirements.txt'
                 sh 'pytest'
                 sh 'pytest --cov-report xml --cov messageboxex'
