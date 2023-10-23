@@ -5,7 +5,7 @@
 
 # 변경 내역
 
-배포 버전 패키징을 위해 pyinstaller 추가 설치
+배포 버전 패키징을 위해 pyinstaller 추가 설치 
 배포 버전 패키징시에 pyinstaller 는 시스템에 설치된 PySide6 를 참조하여 라이브러리 포함시키므로 PySide6 를 system-wide 로 설치 (*** 본래의 venv 환경 activation 은 필요 없고, 적용도 안된다)
 
 ```
